@@ -4,12 +4,12 @@
 #
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #
-import os,tmpfile
+import os,tempfile
 
 ON_OPENSHIFT = False
 DJANGO_APP_NAME = 'openshift'
 TMP_DIR = '/tmp'
-IMAGES_STORE = os.path.josin( os.path.dirname(__file__), 'images')
+IMAGES_STORE = os.path.join( os.path.dirname(__file__), 'images')
 if os.environ.has_key('OPENSHIFT_REPO_DIR'):
     ON_OPENSHIFT = True
     TMP_DIR = os.environ['OPENSHIFT_TMP_DIR']
@@ -31,4 +31,4 @@ IMAGES_THUMBS = {
         'small': (170, 170),
         }
 
-LOG_FILE = tmpfile.mkstmp(dir=TMP_DIR, prefix=DJANGO_APP_NAME)
+LOG_FILE = tempfile.mkstemp(dir=TMP_DIR, prefix=DJANGO_APP_NAME)[1]
