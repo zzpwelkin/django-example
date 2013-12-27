@@ -4,3 +4,4 @@
 # it could be python, php, ruby, etc.
 source $OPENSHIFT_HOMEDIR/python/virtenv/bin/activate
 export PYTHONPATH=`echo $OPENSHIFT_REPO_DIR`:`echo $OPENSHIFT_REPO_DIR`wsgi:$PYTHONPATH
+export OPENSHIFT_SCRAPY_SETTINGS=`echo $OPENSHIFT_REPO_DIR`wsgi/openshift/scraper/settings

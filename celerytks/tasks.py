@@ -1,3 +1,4 @@
+import os
 import celery
 from scrapy.settings import CrawlerSettings
 from scrapy.crawler import CrawlerProcess
