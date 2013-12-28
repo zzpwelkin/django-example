@@ -31,4 +31,9 @@ IMAGES_THUMBS = {
         'small': (170, 170),
         }
 
+EXTENSIONS = {
+        'scrapy.webservice.WebService':None,
+        'scrapy.telnet.TelnetConsole':None,
+        }
+
 LOG_FILE = tempfile.mkstemp(dir=TMP_DIR, prefix=DJANGO_APP_NAME)[1]
